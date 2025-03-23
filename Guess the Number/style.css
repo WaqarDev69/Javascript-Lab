@@ -1,0 +1,127 @@
+/* General Styles */
+body {
+    font-family: 'Press Start 2P', cursive;
+    background-color: #000; /* Set background to black */
+    color: #fff; /* Set text color to white */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Game Container */
+.game-container {
+    background-color: #222; /* Dark gray background for the container */
+    border: 3px solid #fff; /* White border */
+    border-radius: 10px;
+    max-width: 450px;
+    width: 100%;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7); /* Darker shadow for a more prominent effect */
+}
+
+/* Header */
+.game-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.game-info {
+    font-size: 1rem;
+    color: #ccc; /* Light gray color for info text */
+}
+
+/* Title */
+.game-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #fff; /* Ensure title text is white */
+}
+
+/* Secret Number Box */
+.secret-number-box {
+    background: #333; /* Darker gray for the secret number box */
+    color: #fff; /* White text color */
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    border: 3px solid #fff;
+    margin: 0 auto 30px;
+    border-radius: 8px;
+}
+
+/* Separator Line */
+.separator {
+    border: none;
+    border-top: 2px solid #fff;
+    margin: 20px 0 30px;
+}
+
+/* Input and Button */
+.input-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.input-number {
+    width: 80px;
+    padding: 10px;
+    font-size: 1.5rem;
+    text-align: center;
+    border: 3px solid #fff;
+    border-radius: 5px;
+    background: #222; /* Darker background for input */
+    color: #fff; /* White text for the input */
+    outline: none;
+}
+
+.btn {
+    background: #fff; /* White button */
+    color: #000; /* Black text on button */
+    border: 3px solid #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1rem;
+}
+
+.btn:hover {
+    background: #ccc; /* Lighter gray hover effect */
+}
+
+/* Game Status */
+.game-status p {
+    margin: 10px 0;
+    font-size: 1.1rem;
+    color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 450px) {
+    .game-container {
+        padding: 20px;
+    }
+
+    .input-container {
+        flex-direction: column;
+    }
+
+    .input-number {
+        width: 100%;
+    }
+}
+
+
