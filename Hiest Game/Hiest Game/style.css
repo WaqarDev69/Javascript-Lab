@@ -1,0 +1,320 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background: #1a2b2b; /* Dark green-gray background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    position: relative;
+    width: 720px;
+    padding: 25px;
+    background: #2e3b3b; /* Darker green-gray */
+    border: 2px solid #3f4f4f; /* Subtle green-gray border */
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(63, 79, 79, 0.2);
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header h1 {
+    font-size: 2.5em;
+    color: #2ecc71; /* Red only for main heading */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+header p {
+    font-size: 1.1em;
+    color: #91b3b3; /* Light green-gray for subtitle */
+    font-style: italic;
+}
+
+header .reload {
+    font-size: 3rem;
+    cursor: pointer;
+}
+
+
+
+
+
+/* Game Info */
+.game-info {
+    display: flex;
+    align-items: center;
+    background: rgb(35, 48, 48); /* Darker green shade */
+    padding: 12px 15px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+.goal-message{
+    color: #2ecc71;
+    font-size:30px;
+    font-weight: 700;
+    margin: 0 auto;
+    display: none;
+
+}
+
+.stats{
+    display: flex;
+ align-items: center;
+ justify-content: space-between;
+ width: 100%;
+}
+
+.stats h2 {
+    font-size: 1.5em;
+    color: #d9e6e6; /* Light green-gray text */
+    margin-bottom: 5px;
+}
+.stats h3 {
+    font-size: 1.2em;
+    color: #91b3b3;
+}
+
+.stats #money {
+    color: #2ecc71; /* Bright green for money */
+    font-weight: bold;
+}
+
+.stats .goal {
+    font-size: 1.2em;
+    color: #91b3b3; /* Light green-gray for goal */
+}
+
+
+.status {
+    font-size: 1.1em;
+    color: #3f4f4f; /* Darker green-gray for status */
+    font-weight: 500;
+}
+
+/* Controls */
+.controls {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.controls h3 {
+    font-size: 1.4em;
+    color: #d9e6e6; /* Light green-gray */
+    margin-bottom: 12px;
+}
+
+#bet-amount {
+    padding: 8px 12px;
+    font-size: 1em;
+    width: 160px;
+    background: #2e3b3b; /* Dark green-gray background */
+    color: #d9e6e6; /* Light green-gray text */
+    border: 1px solid #2ecc71; /* Bright green border */
+    border-radius: 4px;
+    margin-bottom: 15px;
+    transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+#bet-amount:focus {
+    border-color: #54a385; /* Mid-tone green on focus */
+    background: #354545; /* Slightly lighter green-gray */
+    outline: none;
+}
+
+.risk-options {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+.risk-btn {
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #d9e6e6; /* Light green-gray text */
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.risk-btn:hover {
+    transform: scale(1.03);
+    opacity: 0.95;
+}
+
+#low-risk {
+    background: #2ecc71; /* Bright green */
+}
+
+#med-risk {
+    background: #54a385; /* Mid-tone green */
+}
+
+#high-risk {
+    background: #3f4f4f; /* Dark green-gray */
+}
+
+.stop-btn {
+    padding: 10px 20px;
+    font-size: 1em;
+    background: #354545; /* Mid-tone green-gray */
+    color: #d9e6e6; /* Light green-gray */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.stop-btn:hover {
+    background: #4f6060; /* Lighter green-gray */
+}
+
+/* Log */
+.log {
+    background: #233030; /* Darker green shade */
+    padding: 12px 15px;
+    border-radius: 6px;
+    border: 1px solid #3f4f4f; /* Subtle green-gray outline */
+}
+
+.log h3 {
+    font-size: 1.3em;
+    color: #d9e6e6; /* Light green-gray */
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#game-log {
+    list-style: none;
+    font-size: 0.95em;
+    color: #91b3b3; /* Light green-gray */
+    max-height: 180px;
+    overflow-y: auto;
+    padding-right: 5px;
+}
+
+#game-log li {
+    padding: 8px 10px;
+    background: #2e3b3b; /* Dark green-gray */
+    margin-bottom: 5px;
+    border-radius: 4px;
+    border-left: 3px solid #2ecc71; /* Bright green accent */
+    transition: background 0.2s ease;
+}
+
+#game-log li:hover {
+    background: #354545; /* Slightly lighter green-gray */
+}
+
+#game-log li .ammount {
+    color: #2ecc71;
+    font-size: 20px;
+}
+
+.thief-img{
+    position: absolute;
+    right: -260px;
+    bottom: 0px;
+    display: none;
+}
+
+.bet-result{
+    color: #2ecc71;
+    font-size: 20px;
+}
+
+
+/* Modal container */
+.modal {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px); /* Smooth glass effect */
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Show modal */
+.show-modal {
+    display: flex;
+    opacity: 1;
+}
+
+/* Modal content */
+.modal-content {
+    background: rgba(35, 48, 48, 0.95); /* Semi-transparent for a sleek effect */
+    color: #2ecc71;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    width: 420px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+    position: relative;
+    transform: scale(0.8);
+    animation: fadeIn 0.3s ease-in-out forwards;
+}
+
+/* Modal heading */
+.modal-content h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+/* Highlighted amount */
+.modal-content span {
+    font-weight: bold;
+    font-size: 40px;
+    color: #2ecc71;
+}
+
+/* Close button */
+.close-modal {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 26px;
+    color: #2ecc71;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.close-modal:hover {
+    transform: scale(1.2);
+    color: #27ae60;
+}
+
+/* Smooth modal animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
